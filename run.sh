@@ -3,7 +3,14 @@
 HOMEDIR="$(dirname "$(readlink -f "$0")")"
 mkdir -p $HOMEDIR/work
 
-sudo docker run -it --rm --privileged -v /dev/bus/usb:/dev/bus/usb -v $HOMEDIR:/opt/nottino -v $HOMEDIR/work:/jetson-inference --device
-
-#docker/run.sh -c sntfrc/nottino -v "$HOMEDIR:/opt/nottino --privileged -v /dev/bus/usb:/dev/bus/usb" -r "python3 /opt/nottino/nottino.py"
+sudo docker run --runtime nvidia -it --rm \
+	--network host \
+	--privileged -v /dev/bus/usb:/dev/bus/usb \
+	-v /tmp/argus_socket:/tmp/argus_socket \
+	-v /etc/enctune.conf:/etc/enctune.conf \
+	-v /etc/nv_tegra_release:/etc/nv_tegra_release \
+	-v /tmp/nv_jetson_model:/tmp/nv_jetson_model \
+	-v $HOMEDIR:/opt/nottino \
+	--device /dev/video0 \
+	sntfrc/nottino:latest
 
