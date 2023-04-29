@@ -5,7 +5,7 @@ RUN add-apt-repository --remove "deb https://apt.kitware.com/ubuntu/ bionic main
 RUN apt-get update
 RUN apt-get install -y python3-usb dos2unix
 
-RUN python3 -m pip install blinkstick
+RUN python3 -m pip install blinkstick imutils
 
 RUN dos2unix /usr/local/bin/blinkstick
 RUN chmod a+x /usr/local/bin/blinkstick
