@@ -10,10 +10,9 @@ sudo docker run --runtime nvidia -it --rm \
 	--network host \
 	--privileged -v /dev/bus/usb:/dev/bus/usb \
 	-v /tmp/argus_socket:/tmp/argus_socket \
-	-v /etc/enctune.conf:/etc/enctune.conf \
-	-v /etc/nv_tegra_release:/etc/nv_tegra_release \
-	-v /tmp/nv_jetson_model:/tmp/nv_jetson_model \
 	-v $HOMEDIR:/opt/nottino \
+	-v $HOMEDIR/work:/nvdli-nano/data \
 	--device /dev/video0 \
-	sntfrc/nottino:latest
+	sntfrc/nottino:latest \
+#	python3 /opt/nottino/nottino.py
 
