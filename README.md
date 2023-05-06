@@ -52,4 +52,4 @@ Under the nottino/ directory you will find the nottino.py file that contains the
 I would like to thank some people for their important contributions:
 
 - My wife, Francesca, who came up with the rough idea and its name.
-- My son, Gioele who helped by supplying a lot of training data. :)
+- My son, Gioele, who helped by supplying a lot of training data. :)
