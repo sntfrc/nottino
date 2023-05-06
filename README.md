@@ -1,6 +1,8 @@
 # nottino
 Smart night light project for Jetson AI Specialist certification
 
+![Photo of assembled Nottino prototype](https://github.com/sntfrc/nottino/raw/main/prototype.jpg)
+
 ## What is it?
 Many children like to have some comfort light turned on at night. Modern LED night lights are not power hungry and could be left on all night, but having an always on background light somewhat degrades sleep quality.
 
@@ -25,6 +27,16 @@ The Nottino prototype is assembled with these products:
 
 Components are easily obtainable, and are replaceable with better versions of the same. A production ready device could for example make use of a Jetson Orin, or a BlinkStick Pro.
 
+## Hardware setup
+
+1) Attach the IR illumination leds to the camera board with the provided screws.
+2) Connect CSI ribbon cable to IR camera and developer kit, on connector CAM0. You can carefully fold the connector to make it fit inside the board bounding box.
+3) Put insulating tape over the top metal part of the display/USB/ethernet ports to avoid contact with camera board pads
+4) Mount the camera on the ports over the insulation tape, using double-sided tape. It should fit perfectly over the length of a Jetson Nano 4GB Developer Board's IO block.
+5) Plug BlinkStick on one of the USB ports.
+
+You can either use an external power supply, or attach an USB power bank to the back of the board to make it portable!
+
 ## Software
 
 For the Jetson Nano operating system, the latest JetPack SDK 4.6.1 is used. To get a stable and CUDA-enabled PyTorch environment, Nottino runs in a Docker container based on Nvidia's DLI Course Environment Container. A Dockerfile is included which builds on the runtime environment by adding the BlinkStick API and making some needed small changes.
@@ -39,6 +51,9 @@ There is no need to 'make' or 'docker build'. run.sh automatically takes care of
 
 After starting, the light will operate as described.
 
+## Demo
+
+TODO (YouTube video link and description)
 ## Further tweaking
 
 You can refine the model by training it more on your personalized input, or training it from scratch altogether. You can do this very conveniently by using the DLI container integrated development environment.
