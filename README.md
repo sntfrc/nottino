@@ -27,7 +27,7 @@ Components are easily obtainable, and are replaceable with better versions of th
 
 ## Software
 
-For the Jetson Nano operating system, the latest JetPack SDK 4.6.1 is used. To get a stable and CUDA-enabled PyTorch environment, Nottino runs in a docker container based on Nvidia's DLI Course Environment Container. A Dockerfile is included which builds on the runtime environment by adding the BlinkStick API and making some needed small changes.
+For the Jetson Nano operating system, the latest JetPack SDK 4.6.1 is used. To get a stable and CUDA-enabled PyTorch environment, Nottino runs in a Docker container based on Nvidia's DLI Course Environment Container. A Dockerfile is included which builds on the runtime environment by adding the BlinkStick API and making some needed small changes.
 
 ## Usage
 
@@ -43,4 +43,6 @@ After starting, the light will operate as described.
 
 You can refine the model by training it more on your personalized input, or training it from scratch altogether. You can do this very conveniently by using the DLI container integrated development environment.
 
-To access it, just edit run.sh file by commenting out the "python3 /opt/nottino/nottino.py" line. After that, instead of running the program, run.sh will instead start the familiar DLI JupyterLab on port 8888. You can connect there and use the DLI notebooks to refine the model.
+To access it, just edit run.sh file by commenting out the "python3 /opt/nottino/nottino.py" line. After that, instead of running the program, run.sh will instead start the familiar DLI JupyterLab on port 8888. You can connect there and use the DLI classification notebook to refine the model.
+
+Under the nottino/ directory you will find the nottino.py file that contains the code which is run upon startup. You can tweak it directly from JupyterLab and save the file. There is also a nottino-dev.ipynb development notebook, to test your inference and BlinkStick code live.
