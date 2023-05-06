@@ -33,7 +33,7 @@ Components are easily obtainable, and are replaceable with better versions of th
 2) Connect CSI ribbon cable to IR camera and developer kit, on connector CAM0. You can carefully fold the connector to make it fit inside the board bounding box.
 3) Put insulating tape over the top metal part of the display/USB/ethernet ports to avoid contact with camera board pads
 4) Mount the camera on the ports over the insulation tape, using double-sided tape. It should fit perfectly over the length of a Jetson Nano 4GB Developer Board's IO block.
-5) Plug BlinkStick on one of the USB ports.
+5) Plug BlinkStick in one of the USB ports.
 
 You can either use an external power supply, or attach an USB power bank to the back of the board to make it portable!
 
