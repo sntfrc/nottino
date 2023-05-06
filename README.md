@@ -9,7 +9,7 @@ Nottino tries to do better by eschewing motion detection, and instead looking at
 
 ## How?
 
-The IR camera frames are fed to a fine tuned pre-trained ImageNet neural network, which has been trained to classify images into "awake" and "sleeping" situations. The meaning of 'situation' is flexible. Some information is a dead giveaway of an awake person (for example, pictures containing open eyes or person sitting in bed), while other can be more subtle.
+The IR camera frames are fed to a fine tuned pre-trained ImageNet neural network, which has been trained to classify images into "awake" and "sleeping" _situations_. The meaning of _situation_ is flexible. Some information is a dead giveaway of an awake person (for example, pictures containing open eyes or person sitting in bed), while other can be more subtle.
 At runtime, the awake/sleeping state derived from images is then filtered with debouncing and hysteresis is applied, to make the light only turn on after the awake condition is asserted for longer than a short time, and make the light turn off only after various minutes of constantly detecting a likely sleeping state.
 
 Light is controlled using the great [BlinkStick](https://www.blinkstick.com/) boards and library. These are simple USB HID devices that allow color and intensity control of LED lights. APIs are available for many languages.
@@ -29,9 +29,13 @@ For the Jetson Nano operating system, the latest JetPack SDK 4.6.1 is used. To g
 
 ## Usage
 
-Just clone the repository on your Jetson Nano, and download the fine tuned model into the project directory. Then you can just run the run.sh script (or make it run automatically at startup). There is no need to 'make' or 'docker build', run.sh automatically takes care of building and starting the Docker container, if it's not already cached; so it can be directly invoked without any preparation activity.
+1) Clone the repository on your Jetson Nano
+2) Download the [pre-trained model](https://TODO/nottino.pth) into the project directory
+3) Just run the run.sh script (or make it run automatically at startup).
 
-After starting, the light will start operating as described.
+There is no need to 'make' or 'docker build'. run.sh automatically takes care of building and starting the Docker container, if it's not already cached; so it can be directly invoked without any preparation activity.
+
+After starting, the light will operate as described.
 
 ## Further tweaking
 
