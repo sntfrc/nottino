@@ -44,7 +44,7 @@ For the Jetson Nano operating system, the latest JetPack SDK 4.6.1 is used. To g
 ## Usage
 
 1) Clone the repository on your Jetson Nano
-2) Download the [pre-trained model](https://TODO/nottino.pth) into the project directory
+2) Fine-tune the pre-trained model (nottino.pth) with included notebook
 3) Just run the run.sh script (or make it run automatically at startup).
 
 There is no need to 'make' or 'docker build'. run.sh automatically takes care of building and starting the Docker container, if it's not already cached; so it can be directly invoked without any preparation activity.
@@ -59,9 +59,9 @@ TODO (YouTube video link and description)
 
 You can refine the model by training it more on your personalized input, or training it from scratch altogether. You should probably do so in order to see acceptable results on your setup, since the provided model is only trained with a small amount of data specific to our test environment.
 
-You can do this very conveniently by using the DLI container integrated development environment. To access it, just edit run.sh file by commenting out the "python3 /opt/nottino/nottino.py" line. After that, instead of running the program, run.sh will instead start the familiar DLI JupyterLab on port 8888. You can connect there and use the DLI classification notebook to refine the model.
+You can do this very conveniently by using the included training notebook, or the classic DLI container integrated development environment. To access them, just edit run.sh file by commenting out the "python3 /opt/nottino/nottino.py" line. After that, instead of running the program, run.sh will instead start the familiar DLI JupyterLab on port 8888. You can connect there and either use the customized nottino-training.ipynb notebook, or the full DLI classification notebook to refine the model.
 
-Under the nottino/ directory you will find the nottino.py file that contains the code which is run upon startup. You can tweak it directly from JupyterLab and save the file. There is also a nottino-dev.ipynb development notebook, to test your inference and BlinkStick code live.
+Under the nottino/ directory you will find the nottino.py file that contains the code which is run upon startup. You can tweak it directly from JupyterLab and save the file. There is also another nottino-dev.ipynb development notebook, for live testing of your own inference and BlinkStick code live.
 
 ## Acknowledgments
 
