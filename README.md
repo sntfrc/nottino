@@ -61,7 +61,7 @@ You can refine the model by training it more on your personalized input, or trai
 
 You can do this very conveniently by using the included training notebook, or the classic DLI container integrated development environment. To access them, just edit run.sh file by commenting out the "/bin/bash /opt/nottino/startup-cmd" line. After that, instead of running the program, run.sh will instead start the familiar DLI JupyterLab on port 8888. You can connect there and either use the customized nottino-training.ipynb notebook, or the full DLI classification notebook to refine the model.
 
-Under the nottino/ directory you will find the nottino.py file that contains the code which is run upon startup. You can tweak it directly from JupyterLab and save the file. There is also another nottino-dev.ipynb development notebook, for live testing of your own inference and BlinkStick code live.
+Under the nottino/ directory you will find the nottino.ipynb notebook file that contains the code which is run upon startup. This file is automatically converted to a nottino.py Python script before every run, so you can modify the notebook directly from JupyterLab and play with it for live testing of your own inference and BlinkStick code live. Your updated code will then be executed by run.sh. 
 
 ## Acknowledgments
 
