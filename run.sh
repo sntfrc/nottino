@@ -14,5 +14,4 @@ sudo docker run --runtime nvidia -it --rm \
 	-v $HOMEDIR/work:/nvdli-nano/data \
 	--device /dev/video0 \
 	sntfrc/nottino:latest \
-	"jupyter nbconvert nottino.ipynb --to python && python3 /opt/nottino/nottino.py"
-
+	/bin/bash /opt/nottino/startup-cmd
