@@ -6,7 +6,8 @@ mkdir -p $HOMEDIR/work
 cd $HOMEDIR
 sudo docker build . -t sntfrc/nottino
 
-sudo docker run --runtime nvidia -it --rm \
+sudo docker run --runtime nvidia -t --rm \
+	--name nottino \
 	--network host \
 	--privileged -v /dev/bus/usb:/dev/bus/usb \
 	-v /tmp/argus_socket:/tmp/argus_socket \
