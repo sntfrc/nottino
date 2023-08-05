@@ -51,10 +51,6 @@ There is no need to 'make' or 'docker build'. run.sh automatically takes care of
 
 After starting, the light will operate as described.
 
-## Demo
-
-TODO (YouTube video link and description)
-
 ## Further tweaking
 
 You can refine the model by training it more on your personalized input, or training it from scratch altogether. You should probably do so in order to see acceptable results on your setup, since the provided model is only trained with a small amount of data specific to our test environment.
